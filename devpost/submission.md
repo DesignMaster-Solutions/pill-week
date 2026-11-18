@@ -42,5 +42,6 @@ Lens Studio, TypeScript, Spectacles Interaction Kit, UI Kit, LEAF, CLAD agents, 
 spectacles, specs, lens-studio, augmented-reality, caregiving, health, clad, leaf
 
 ## Links
+- Devpost: https://devpost.com/software/pill-week (submission 1310423, submitted 2026-11-18)
 - Code: https://github.com/DesignMaster-Solutions/pill-week
-- Video (2:56, screen recording of the Lens in the Lens Studio preview): docs/video/demo.mp4, to be uploaded to YouTube
+- Video (2:56, screen recording of the Lens in the Lens Studio preview): https://youtu.be/5JjF62Mjf48 (source: docs/video/demo.mp4)

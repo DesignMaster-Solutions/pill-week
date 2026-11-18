@@ -21,3 +21,5 @@ Built for [Learn AR with SPECS](https://learn-specs.devpost.com/) Round 2 by Des
 - Planning notes: [devpost/planning-notes.md](devpost/planning-notes.md)
 
 License: MIT
+
+Demo video (screen recording of the Lens Studio preview): https://youtu.be/5JjF62Mjf48

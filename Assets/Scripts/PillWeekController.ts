@@ -169,7 +169,7 @@ export class PillWeekController extends BaseScriptComponent {
     const s = this.state
     const found = s.boxFound
     this.boxHereButton.setVisible(!found)
-    this.nextButton.setVisible(found)
+    this.nextButton.setVisible(found && !s.finished) // after Finish only "Start over" is left
     this.startOverButton.setVisible(found)
     this.card.setVisible(found)
     this.box.setLabelsVisible(found)

@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/a2e1b879-b55d-452e-9c77-bccc2f793191>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9426f216-c24a-4205-8ce5-e4a7f3d90f9d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9426f216-c24a-4205-8ce5-e4a7f3d90f9d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> af62df49-070b-4556-bf0b-baa26475bec2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/af62df49-070b-4556-bf0b-baa26475bec2>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e628467a-caa7-49f8-a3b5-3bac962160c0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    heightCm: false
+    label: false
+    labelSize: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - label: Next medicine
+      widthCm: !<float> 12.000000
+      heightCm: !<float> 6.000000
+      labelSize: !<float> 60.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekButton – table-edge button</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string label = "Next medicine" {"hint":"Button label"}'
+    - '// @input float widthCm = 12 {"hint":"Button width in cm", "widget":"slider", "min":6, "max":24, "step":0.5}'
+    - '// @input float heightCm = 6 {"hint":"Button height in cm", "widget":"slider", "min":3, "max":10, "step":0.5}'
+    - '// @input float labelSize = 72 {"hint":"Label text size (Lens Text size; ~44 per 1 cm em height)", "widget":"slider", "min":30, "max":100, "step":1}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/923a516a-a70a-4a21-a237-c757304d929e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 938b7065-414e-4312-a9d2-a1d58e2db5b2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 938b7065-414e-4312-a9d2-a1d58e2db5b2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5730c71f-6907-46b2-a950-eabb9946cf5e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5730c71f-6907-46b2-a950-eabb9946cf5e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 00da4b51-575b-401e-8d7d-3fa49ca1ef69
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bodySize: false
+    heightCm: false
+    titleSize: false
+    warnColor: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - widthCm: !<float> 24.000000
+      heightCm: !<float> 12.000000
+      titleSize: !<float> 80.000000
+      bodySize: !<float> 70.000000
+      warnColor: !<Vec3> {x: 1.000000, y: 0.750000, z: 0.300000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekCardUI – medicine card / summary</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float widthCm = 30 {"hint":"Card width in cm (brief: 24; 30 fits the longest line at 1.2 cm cap height)", "widget":"slider", "min":16, "max":40, "step":1}'
+    - '// @input float heightCm = 15 {"hint":"Card height in cm (brief: 12; 15 fits two 2-line rows)", "widget":"slider", "min":8, "max":24, "step":0.5}'
+    - '// @input float titleSize = 100 {"hint":"Text size of the medicine name (Lens Text size; ~44 per 1 cm em height)", "widget":"slider", "min":40, "max":120, "step":1}'
+    - '// @input float bodySize = 92 {"hint":"Text size of the other card lines (92 gives ~1.2 cm cap height, measured)", "widget":"slider", "min":40, "max":120, "step":1}'
+    - '// @input vec3 warnColor = "{1, 0.75, 0.3}" {"hint":"Color of warnings and the skip list", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

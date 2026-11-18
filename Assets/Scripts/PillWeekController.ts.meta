@@ -1,0 +1,74 @@
+- !<AssetImportMetadata/3c13172c-816a-4a58-916e-cc2de457c150>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1afcb71a-fe6f-4165-ac41-a12af9edb174
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1afcb71a-fe6f-4165-ac41-a12af9edb174
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a2e93537-3fc4-49fa-9f41-7cc7ea6a16d8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a2e93537-3fc4-49fa-9f41-7cc7ea6a16d8>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 232d5045-2a3c-4c98-a103-5df3c1d372d6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    box: false
+    boxHereButton: false
+    card: false
+    finishSound: false
+    nextButton: false
+    startOverButton: false
+    volume: false
+    wrongSound: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - box: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      card: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      boxHereButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      nextButton: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      startOverButton: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      wrongSound: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      finishSound: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      volume: 0.800000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekController – Pill Week flow</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 box {"hint":"The pill box view (PillBox object)"}'
+    - '// @input AssignableType_2 card {"hint":"The medicine card / summary (MedicineCard object)"}'
+    - "// @input AssignableType_3 boxHereButton {\"hint\":\"'The box is here' button\"}"
+    - "// @input AssignableType_4 nextButton {\"hint\":\"'Next medicine' / 'Finish' button\"}"
+    - "// @input AssignableType_5 startOverButton {\"hint\":\"'Start over' button\"}"
+    - '// @input Asset.AudioTrackAsset wrongSound {"hint":"Short low tone for a wrong compartment"}'
+    - '// @input Asset.AudioTrackAsset finishSound {"hint":"Soft chime at Finish"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float volume = 0.8 {"hint":"Volume of both cues", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

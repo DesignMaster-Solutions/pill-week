@@ -1,4 +1,4 @@
-// PillWeekButton — one UIKit RectangleButton with a light label, placed by its authored SceneObject
+// PillWeekButton: one UIKit RectangleButton with a light label, placed by its authored SceneObject
 // (BoxHereButton / NextButton / StartOverButton). Emits onPressed; setLabel() lets the controller
 // switch "Next medicine" to "Finish". Holds no state.
 import Event, {PublicApi} from "SpectaclesInteractionKit.lspkg/Utils/Event"
@@ -8,7 +8,7 @@ const BUTTON_LABEL_Z = 0.08
 
 @component
 export class PillWeekButton extends BaseScriptComponent {
-  @ui.label('<span style="color: #60A5FA;">PillWeekButton – table-edge button</span>')
+  @ui.label('<span style="color: #60A5FA;">PillWeekButton: table-edge button</span>')
   @ui.separator
   @ui.group_start("Settings")
   @input

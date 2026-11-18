@@ -1,4 +1,4 @@
-// PillWeekState — pure logic for Pill Week. Owns the sample regimen, what is placed where,
+// PillWeekState: pure logic for Pill Week. Owns the sample regimen, what is placed where,
 // skipped detection, and every card/summary string. No scene access, no Lens globals,
 // so tests/PillWeekState.test.ts runs it under plain Node.
 // Must not: touch SceneObjects, play audio, or know about SIK.

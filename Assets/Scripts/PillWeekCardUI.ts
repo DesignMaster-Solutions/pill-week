@@ -1,4 +1,4 @@
-// PillWeekCardUI — passive view of the medicine card standing behind the box (and of the summary,
+// PillWeekCardUI: passive view of the medicine card standing behind the box (and of the summary,
 // which replaces it after the last medicine). UIKit BackPlate + FlexLayout column, four text rows:
 // title, schedule (or summary), progress line, status (warning / skip list).
 // Expects: to sit on the "MedicineCard" SceneObject, tilted toward the user in the scene.
@@ -12,7 +12,7 @@ const LAYOUT_Z_LIFT = 0.02
 
 @component
 export class PillWeekCardUI extends BaseScriptComponent {
-  @ui.label('<span style="color: #60A5FA;">PillWeekCardUI – medicine card / summary</span>')
+  @ui.label('<span style="color: #60A5FA;">PillWeekCardUI: medicine card / summary</span>')
   @ui.separator
   @ui.group_start("Settings")
   @input

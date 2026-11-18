@@ -1,4 +1,4 @@
-// PillWeekBoxUI — passive view of the 7 x 2 pill box (stand-in for the real one on the table).
+// PillWeekBoxUI: passive view of the 7 x 2 pill box (stand-in for the real one on the table).
 // Owns: the box base, 14 compartment SceneObjects "Cell_<Day>_<AM|PM>" (SIK Interactable + box
 // collider + hover highlight), check marks, medicine dots, "skipped" labels, day and AM/PM labels.
 // Expects: to sit on the "PillBox" SceneObject whose origin is the box's bottom center on the table.
@@ -26,7 +26,7 @@ interface Cell {
 
 @component
 export class PillWeekBoxUI extends BaseScriptComponent {
-  @ui.label('<span style="color: #60A5FA;">PillWeekBoxUI – pill box view</span>')
+  @ui.label('<span style="color: #60A5FA;">PillWeekBoxUI: pill box view</span>')
   @ui.separator
   @ui.group_start("Settings")
   @input

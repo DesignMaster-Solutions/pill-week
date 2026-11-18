@@ -1,4 +1,4 @@
-// PillWeekController — the one orchestrator. Owns the PillWeekState, routes every SIK/UIKit pinch
+// PillWeekController: the one orchestrator. Owns the PillWeekState, routes every SIK/UIKit pinch
 // to a single handler (onBoxHere / onCellPinched / onNext / onStartOver), pushes the result to the
 // passive views, and plays the two cues. Read-only getters below exist for LEAF tests; they never
 // mutate. reset() is exactly what "Start over" does.
@@ -11,7 +11,7 @@ import {CellView, PillWeekState, REGIMEN, WEEK_KEYS} from "./PillWeekState"
 
 @component
 export class PillWeekController extends BaseScriptComponent {
-  @ui.label('<span style="color: #60A5FA;">PillWeekController – Pill Week flow</span>')
+  @ui.label('<span style="color: #60A5FA;">PillWeekController: Pill Week flow</span>')
   @ui.separator
   @ui.group_start("References")
   @input

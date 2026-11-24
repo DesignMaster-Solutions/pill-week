@@ -1,8 +1,7 @@
 {
   "brand": "Pill Week · Lens Studio 5.24.1 Interactive Preview (SPECS 27) · sample regimen, not medical advice",
   "footer": "sample regimen, not medical advice",
-  "voice": "Samantha",
-  "rate": 180,
+  "voice": "alan",
   "bg": "#14202a",
   "accent": "#8fd3ff",
   "crop": [
@@ -22,7 +21,7 @@
         "Screen recording of the Lens Studio preview.",
         "Not run on Spectacles glasses yet."
       ],
-      "say": "Every Sunday, someone in our families fills a weekly pill box for an older parent, an open bottle in one hand and a paper list on the table. The mistakes are quiet ones: a skipped day, or a tablet in the wrong slot. Pill Week puts the plan on the box itself."
+      "say": "Every Sunday my family fills a pill box for an older parent. And the mistakes are quiet. A skipped day, a tablet in the wrong slot. So Pill Week puts the plan right on the box."
     },
     {
       "title": "Two things before the demo",
@@ -33,7 +32,7 @@
         "Everything here is the Lens Studio preview, in real time.",
         "Nothing in this video has run on Spectacles glasses."
       ],
-      "say": "Two honest notes. The regimen here is a made-up sample, not medical advice, and the lens does not read prescriptions or recognize tablets. This is a real-time recording of the Lens Studio preview. Nothing has run on Spectacles glasses yet."
+      "say": "Two quick things. The pill list is made up, just a sample, so it's not advice from a doctor. And the lens doesn't read prescriptions or tablets. This is the Lens Studio preview, recorded live, not Spectacles yet."
     },
     {
       "title": "The box is here",
@@ -51,7 +50,7 @@
       ],
       "clip": "clips/03-box-is-here.mp4",
       "clip_y": 0,
-      "say": "A virtual pill box stands in for the real one: seven days, morning and evening, four centimeter compartments, on a table in front of me. At the start there is one button: The box is here."
+      "say": "This virtual box stands in for a real one. Seven days, morning and evening, little four centimeter slots, sitting on the table in front of me. When it starts, there's just one button. The box is here."
     },
     {
       "title": "One medicine at a time",
@@ -68,7 +67,7 @@
       ],
       "clip": "clips/04-first-medicine.mp4",
       "clip_y": 0,
-      "say": "One pinch, and the first medicine card stands behind the box. Losartan, fifty milligrams, every morning, zero of seven placed. Only the seven morning compartments light up, in that medicine's own blue."
+      "say": "I pinch it, and the first medicine card shows up behind the box. Losartan, fifty milligrams, every morning. Zero of seven so far. And only the seven morning slots light up, in its own blue."
     },
     {
       "title": "Pinch the compartment you filled",
@@ -84,7 +83,7 @@
       ],
       "clip": "clips/05-check-undo.mp4",
       "clip_y": 0,
-      "say": "Each time a tablet drops in, I pinch that compartment. It gets a check and a small dot, and the counter goes up. Pinch it again to undo it."
+      "say": "Every time I drop a tablet in, I pinch that slot. It gets a check and a little dot, and the count goes up. Pinch it again and it's undone."
     },
     {
       "title": "Wrong compartment",
@@ -100,7 +99,7 @@
       ],
       "clip": "clips/06-wrong-compartment.mp4",
       "clip_y": 0,
-      "say": "If I reach for a compartment where this medicine does not go, like Tuesday evening, it is refused. It flashes, a low tone plays, and the card says: not here, Losartan goes in mornings only."
+      "say": "Now say I go for the wrong slot, like Tuesday evening. It won't take it. It flashes, plays a low tone, and the card tells me, not here, Losartan only goes in the mornings."
     },
     {
       "title": "Skipped turns amber",
@@ -116,7 +115,7 @@
       ],
       "clip": "clips/07-skipped-amber.mp4",
       "clip_y": 0,
-      "say": "If I fill Wednesday while Tuesday is still empty, Tuesday turns amber and reads skipped, before I move on. Filling Tuesday clears it."
+      "say": "If I fill Wednesday and Tuesday is still empty, Tuesday turns amber and says skipped. I see it before I move on. Fill Tuesday, and it clears."
     },
     {
       "title": "Next medicine",
@@ -133,7 +132,7 @@
       ],
       "clip": "clips/08-next-medicine.mp4",
       "clip_y": 0,
-      "say": "Next medicine moves down the list. Metformin lights all fourteen compartments. Calcium only Monday, Wednesday, Friday and Sunday evening. Vitamin B twelve only Sunday morning. The dots stack, so the box shows what is already inside."
+      "say": "Next takes me down the list. Metformin lights up all fourteen slots. Calcium is only Monday, Wednesday, Friday and Sunday evening. Vitamin B twelve, just Sunday morning. The dots stack up, so the box shows you what's already inside."
     },
     {
       "title": "Finish and the summary",
@@ -152,7 +151,7 @@
       ],
       "clip": "clips/09-summary.mp4",
       "clip_y": 0,
-      "say": "After the fourth medicine, Next becomes Finish, and a full week reads morning fifteen of fifteen, evening eleven of eleven, zero skipped. Then I fill it again and leave Thursday evening empty. Metformin flags it as skipped right away. At Finish, the summary names it, a soft chime plays, and that compartment stays amber on the box."
+      "say": "After the fourth medicine, Next turns into Finish. A full week reads fifteen of fifteen in the morning, eleven of eleven in the evening. Then I leave Thursday evening empty on purpose. It's flagged right away, the summary calls it out, and that slot stays amber."
     },
     {
       "title": "Within reach of a seated user",
@@ -179,13 +178,13 @@
       ],
       "clip": "clips/10-reach.mp4",
       "clip_y": 0,
-      "say": "A LEAF scenario drives an inverse kinematics arm, with no fallback, to every button and all fourteen compartments, from my own eye view. All seventeen are in direct reach. On this tight grid the simulated hand sometimes presses the compartment next to the one it reached, so skips show up here."
+      "say": "A LEAF test moves a simulated arm to every button and all fourteen slots. All seventeen are within reach. But the slots are tight, and sometimes the hand hits the one next door."
     },
     {
       "title": "Tested with LEAF in the preview",
       "mono_cmd": "grep -oE '(PASSED|FAILED): dc[0-9a-z-]+' leaf-run.log",
       "mono_cwd": "..",
-      "say": "Seven LEAF scenarios, one per done criterion, drive the lens with Spectacles Interaction Kit input, and all seven pass. I also broke one assertion on purpose to watch it fail."
+      "say": "There are seven LEAF tests, one for each thing the lens has to do, and they drive it with real Spectacles input. All seven pass. I also broke one on purpose, just to see it fail."
     },
     {
       "title": "Not proven yet",
@@ -197,7 +196,8 @@
         "Voice for \"done\" and \"next\" (buttons here).",
         "Sample regimen. Not medical advice."
       ],
-      "say": "Not proven yet: pinch precision on real four centimeter compartments, holding the overlay on a real box to about a centimeter, and how the tints read over a real lid. The regimen is a sample, not medical advice. Thanks for watching."
+      "say": "Not proven yet. A real pinch on a four centimeter slot, keeping the overlay on a real box, and the colors on a real lid. Thanks for watching."
     }
-  ]
+  ],
+  "lang": "en"
 }

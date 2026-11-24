@@ -1,0 +1,203 @@
+{
+  "brand": "Pill Week · Lens Studio 5.24.1 Interactive Preview (SPECS 27) · sample regimen, not medical advice",
+  "footer": "sample regimen, not medical advice",
+  "voice": "Samantha",
+  "rate": 180,
+  "bg": "#14202a",
+  "accent": "#8fd3ff",
+  "crop": [
+    180,
+    330,
+    1940,
+    970
+  ],
+  "out": "demo.mp4",
+  "scenes": [
+    {
+      "title": "Pill Week",
+      "lines": [
+        "Filling a parent's weekly pill box, with the plan on the box itself.",
+        "For the family member who fills it every Sunday.",
+        "A Spectacles lens. Lens Studio 5.24.1, SIK 3.1.0, UI Kit, LEAF 3.0.0.",
+        "Screen recording of the Lens Studio preview.",
+        "Not run on Spectacles glasses yet."
+      ],
+      "say": "Every Sunday, someone in our families fills a weekly pill box for an older parent, an open bottle in one hand and a paper list on the table. The mistakes are quiet ones: a skipped day, or a tablet in the wrong slot. Pill Week puts the plan on the box itself."
+    },
+    {
+      "title": "Two things before the demo",
+      "lines": [
+        "The regimen is a made-up sample of four medicines.",
+        "It is not a prescription and not medical advice.",
+        "The lens does not read prescriptions or recognize tablets.",
+        "Everything here is the Lens Studio preview, in real time.",
+        "Nothing in this video has run on Spectacles glasses."
+      ],
+      "say": "Two honest notes. The regimen here is a made-up sample, not medical advice, and the lens does not read prescriptions or recognize tablets. This is a real-time recording of the Lens Studio preview. Nothing has run on Spectacles glasses yet."
+    },
+    {
+      "title": "The box is here",
+      "rec": "frames/01-start",
+      "rec_from": 1.0,
+      "rec_leaf": "start state, no input",
+      "rec_note": "Stand-in: a 32 x 10 cm weekly box, 4 cm compartments, 45 cm in front of me.",
+      "side": [
+        "7 days",
+        "morning row at the back",
+        "evening row in front",
+        "",
+        "Table edge 25 cm away,",
+        "40 cm below my eyes"
+      ],
+      "clip": "clips/03-box-is-here.mp4",
+      "clip_y": 0,
+      "say": "A virtual pill box stands in for the real one: seven days, morning and evening, four centimeter compartments, on a table in front of me. At the start there is one button: The box is here."
+    },
+    {
+      "title": "One medicine at a time",
+      "rec": "frames/dc1",
+      "rec_from": 4.5,
+      "rec_leaf": "LEAF dc1",
+      "rec_note": "Losartan 50 mg, every morning. Only its 7 compartments light up.",
+      "side": [
+        "Medicine 1 of 4",
+        "0 of 7 placed",
+        "",
+        "The next one to fill",
+        "pulses"
+      ],
+      "clip": "clips/04-first-medicine.mp4",
+      "clip_y": 0,
+      "say": "One pinch, and the first medicine card stands behind the box. Losartan, fifty milligrams, every morning, zero of seven placed. Only the seven morning compartments light up, in that medicine's own blue."
+    },
+    {
+      "title": "Pinch the compartment you filled",
+      "rec": "frames/dc2",
+      "rec_from": 1.0,
+      "rec_leaf": "LEAF dc2",
+      "rec_note": "Monday morning: checked, counter 1 of 7. Pinch again: undone.",
+      "side": [
+        "Check + dot",
+        "in the medicine's tint",
+        "",
+        "Pinch again to undo"
+      ],
+      "clip": "clips/05-check-undo.mp4",
+      "clip_y": 0,
+      "say": "Each time a tablet drops in, I pinch that compartment. It gets a check and a small dot, and the counter goes up. Pinch it again to undo it."
+    },
+    {
+      "title": "Wrong compartment",
+      "rec": "frames/dc3",
+      "rec_from": 1.0,
+      "rec_leaf": "LEAF dc3",
+      "rec_note": "Tuesday evening is refused for Losartan. A low tone plays.",
+      "side": [
+        "Stays unchecked",
+        "",
+        "\"Not here: Losartan",
+        "goes in mornings only\""
+      ],
+      "clip": "clips/06-wrong-compartment.mp4",
+      "clip_y": 0,
+      "say": "If I reach for a compartment where this medicine does not go, like Tuesday evening, it is refused. It flashes, a low tone plays, and the card says: not here, Losartan goes in mornings only."
+    },
+    {
+      "title": "Skipped turns amber",
+      "rec": "frames/dc4",
+      "rec_from": 1.0,
+      "rec_leaf": "LEAF dc4",
+      "rec_note": "Wednesday filled while Tuesday is empty: Tuesday turns amber.",
+      "side": [
+        "\"skipped\"",
+        "",
+        "Filling Tuesday",
+        "clears it"
+      ],
+      "clip": "clips/07-skipped-amber.mp4",
+      "clip_y": 0,
+      "say": "If I fill Wednesday while Tuesday is still empty, Tuesday turns amber and reads skipped, before I move on. Filling Tuesday clears it."
+    },
+    {
+      "title": "Next medicine",
+      "rec": "frames/dc5",
+      "rec_from": 2.0,
+      "rec_leaf": "LEAF dc5",
+      "rec_note": "Metformin: all 14. Calcium: Mon, Wed, Fri, Sun evening. B12: Sunday morning.",
+      "side": [
+        "Each medicine",
+        "has its own tint",
+        "",
+        "Dots stack, so the box",
+        "shows what is inside"
+      ],
+      "clip": "clips/08-next-medicine.mp4",
+      "clip_y": 0,
+      "say": "Next medicine moves down the list. Metformin lights all fourteen compartments. Calcium only Monday, Wednesday, Friday and Sunday evening. Vitamin B twelve only Sunday morning. The dots stack, so the box shows what is already inside."
+    },
+    {
+      "title": "Finish and the summary",
+      "rec": "frames/dc6",
+      "rec_from": 16.5,
+      "rec_leaf": "LEAF dc6",
+      "rec_note": "A full week, then again with Thursday evening left empty on purpose.",
+      "side": [
+        "Full week:",
+        "Morning 15 of 15",
+        "Evening 11 of 11",
+        "0 skipped",
+        "",
+        "The gap is named",
+        "and stays amber"
+      ],
+      "clip": "clips/09-summary.mp4",
+      "clip_y": 0,
+      "say": "After the fourth medicine, Next becomes Finish, and a full week reads morning fifteen of fifteen, evening eleven of eleven, zero skipped. Then I fill it again and leave Thursday evening empty. Metformin flags it as skipped right away. At Finish, the summary names it, a soft chime plays, and that compartment stays amber on the box."
+    },
+    {
+      "title": "Within reach of a seated user",
+      "rec": "frames/dc7",
+      "rec_from": 40.0,
+      "rec_leaf": "LEAF dc7, IK arm, no fallback",
+      "rec_note": "My own eye view. Every button and all 14 compartments reached by direct touch.",
+      "side": [
+        "Buttons 49 to 52 cm",
+        "from the eye",
+        "",
+        "Compartments",
+        "57 to 61 cm",
+        "",
+        "Reach: 17 of 17",
+        "Press precision:",
+        "not proven"
+      ],
+      "crop": [
+        180,
+        150,
+        1940,
+        970
+      ],
+      "clip": "clips/10-reach.mp4",
+      "clip_y": 0,
+      "say": "A LEAF scenario drives an inverse kinematics arm, with no fallback, to every button and all fourteen compartments, from my own eye view. All seventeen are in direct reach. On this tight grid the simulated hand sometimes presses the compartment next to the one it reached, so skips show up here."
+    },
+    {
+      "title": "Tested with LEAF in the preview",
+      "mono_cmd": "grep -oE '(PASSED|FAILED): dc[0-9a-z-]+' leaf-run.log",
+      "mono_cwd": "..",
+      "say": "Seven LEAF scenarios, one per done criterion, drive the lens with Spectacles Interaction Kit input, and all seven pass. I also broke one assertion on purpose to watch it fail."
+    },
+    {
+      "title": "Not proven yet",
+      "lines": [
+        "Pinch precision on real 4 cm compartments: in the preview the",
+        "simulated hand sometimes lands on the next compartment.",
+        "Holding the overlay on a real box to about 1 cm.",
+        "Light tints over a real lid in kitchen light.",
+        "Voice for \"done\" and \"next\" (buttons here).",
+        "Sample regimen. Not medical advice."
+      ],
+      "say": "Not proven yet: pinch precision on real four centimeter compartments, holding the overlay on a real box to about a centimeter, and how the tints read over a real lid. The regimen is a sample, not medical advice. Thanks for watching."
+    }
+  ]
+}

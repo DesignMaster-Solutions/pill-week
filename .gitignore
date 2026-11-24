@@ -47,6 +47,7 @@ agent/
 .clad/
 .virtual-scene*.json
 leaf_plugin_settings.json
+Plugins/
 
 # Preview frames behind docs/video/clips (large); the clips are committed
 docs/video/frames/

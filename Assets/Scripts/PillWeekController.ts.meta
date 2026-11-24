@@ -24,6 +24,7 @@
   VersionPatch: 0
   VersionPrerelease: ""
   UpdateOrder: 0
+  RunInEditor: false
   ComponentUid: 232d5045-2a3c-4c98-a103-5df3c1d372d6
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
@@ -57,7 +58,7 @@
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekController – Pill Week flow</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekController: Pill Week flow</span>"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"References"}'
     - '// @input AssignableType_1 box {"hint":"The pill box view (PillBox object)"}'

@@ -241,3 +241,33 @@ export class PillWeekState {
     return s.length ? `${s.length} skipped: ${s.join(", ")}` : ""
   }
 }
+
+// ------------------------------------------------------------ World Query placement (pure pose math)
+// Plain [x, y, z] arrays in world cm, so Node can test it; the controller converts from/to vec3.
+
+export type V3 = [number, number, number]
+
+/** Where the PillBox sits under the PillWeek root (the stand-in layout, head at the origin). */
+export const BOX_LOCAL: V3 = [0, -40, -45]
+
+/** Rotate v about world Y by yaw (radians); yaw 0 = looking down -Z. */
+export function rotY(v: V3, yaw: number): V3 {
+  const c = Math.cos(yaw)
+  const s = Math.sin(yaw)
+  return [v[0] * c + v[2] * s, v[1], -v[0] * s + v[2] * c]
+}
+
+/** The ray for "The box is here": from the head toward where the stand-in box would be, turned to the user's yaw. */
+export function boxRay(head: V3, look: V3, lengthCm: number): {yaw: number; end: V3} {
+  const yaw = Math.atan2(-look[0], -look[2])
+  const d = rotY(BOX_LOCAL, yaw)
+  const k = lengthCm / Math.hypot(d[0], d[1], d[2])
+  return {yaw, end: [head[0] + d[0] * k, head[1] + d[1] * k, head[2] + d[2] * k]}
+}
+
+/** Root position that puts the PillBox on the hit, or null when the surface is not level and facing up (about 25 degrees). */
+export function rootForHit(hit: V3, normal: V3, yaw: number): V3 | null {
+  if (normal[1] / Math.hypot(normal[0], normal[1], normal[2]) < 0.9) return null
+  const o = rotY(BOX_LOCAL, yaw)
+  return [hit[0] - o[0], hit[1] - o[1], hit[2] - o[2]]
+}

@@ -7,7 +7,11 @@
 import {PillWeekBoxUI} from "./PillWeekBoxUI"
 import {PillWeekButton} from "./PillWeekButton"
 import {PillWeekCardUI} from "./PillWeekCardUI"
-import {CellView, PillWeekState, REGIMEN, WEEK_KEYS} from "./PillWeekState"
+import WorldCameraFinderProvider from "InteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider"
+import {boxRay, CellView, PillWeekState, REGIMEN, rootForHit, V3, WEEK_KEYS} from "./PillWeekState"
+
+const RAY_CM = 150 // seated: reaches a table, not the floor
+const v3 = (v: vec3): V3 => [v.x, v.y, v.z]
 
 @component
 export class PillWeekController extends BaseScriptComponent {
@@ -48,6 +52,8 @@ export class PillWeekController extends BaseScriptComponent {
   private tints: vec3[] = REGIMEN.map((m) => new vec3(m.tint[0], m.tint[1], m.tint[2]))
   private wrongAudio!: AudioComponent
   private chimeAudio!: AudioComponent
+  private hitSession: HitTestSession | null = null
+  private surface = false
 
   onAwake(): void {
     // Root runs first in hierarchy order; the views below are not awake yet, so wire on start.
@@ -63,6 +69,7 @@ export class PillWeekController extends BaseScriptComponent {
     this.wrongAudio = this.audio("WrongTone", this.wrongSound)
     this.chimeAudio = this.audio("FinishChime", this.finishSound)
     this.box.setTints(this.tints)
+    this.startWorldQuery()
 
     this.boxHereButton.onPressed.add(() => this.onBoxHere())
     this.nextButton.onPressed.add(() => this.onNext())
@@ -82,6 +89,52 @@ export class PillWeekController extends BaseScriptComponent {
   onBoxHere(): void {
     this.state.markBoxFound()
     this.render()
+    this.findSurface()
+  }
+
+  // ------------------------------------------------------------ World Query: put the box on the real table
+
+  private startWorldQuery(): void {
+    try {
+      const wq = require("LensStudio:WorldQueryModule") as WorldQueryModule
+      const options = HitTestSessionOptions.create()
+      options.filter = true
+      this.hitSession = wq.createHitTestSessionWithOptions(options)
+      this.hitSession.start() // depth warms up while the user looks at the box
+    } catch (e) {
+      print(`PillWeekController: World Query unavailable, keeping the stand-in (${e})`)
+    }
+  }
+
+  /** One hit test from the head toward the box spot; a level hit moves the whole layout onto it. */
+  private findSurface(): void {
+    if (!this.hitSession) return
+    const cam = WorldCameraFinderProvider.getInstance()
+    const head = v3(cam.getWorldPosition())
+    const ray = boxRay(head, v3(cam.forward().uniformScale(-1)), RAY_CM)
+    this.hitSession.hitTest(new vec3(head[0], head[1], head[2]), new vec3(ray.end[0], ray.end[1], ray.end[2]), (hit) => {
+      this.placeOnHit(hit ? v3(hit.position) : null, hit ? v3(hit.normal) : null, ray.yaw)
+      this.hitSession.stop()
+    })
+  }
+
+  /** Moves the PillWeek root so the PillBox sits on the hit, turned to yaw. No or non-level hit: stand-in stays. */
+  placeOnHit(hit: V3 | null, normal: V3 | null, yaw: number): boolean {
+    const root = hit && normal ? rootForHit(hit, normal, yaw) : null
+    if (!root) {
+      print("PillWeekController: no level surface hit, keeping the stand-in")
+      return false
+    }
+    const t = this.sceneObject.getTransform()
+    t.setWorldPosition(new vec3(root[0], root[1], root[2]))
+    t.setWorldRotation(quat.angleAxis(yaw, vec3.up()))
+    for (let i = 0; i < this.sceneObject.getChildrenCount(); i++) {
+      const c = this.sceneObject.getChild(i)
+      if (c.name === "Table (stand-in)") c.enabled = false // the real table is there now
+    }
+    this.surface = true
+    print(`PillWeekController: box placed on surface at ${hit}`)
+    return true
   }
 
   onCellPinched(key: string): void {
@@ -112,6 +165,10 @@ export class PillWeekController extends BaseScriptComponent {
 
   get boxFound(): boolean {
     return this.state.boxFound
+  }
+  /** True once World Query put the layout on a real surface. */
+  get onSurface(): boolean {
+    return this.surface
   }
   get finished(): boolean {
     return this.state.finished

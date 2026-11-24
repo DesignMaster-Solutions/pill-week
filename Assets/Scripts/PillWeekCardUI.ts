@@ -3,10 +3,10 @@
 // title, schedule (or summary), progress line, status (warning / skip list).
 // Expects: to sit on the "MedicineCard" SceneObject, tilted toward the user in the scene.
 // Must not: compute any text; the controller pushes finished strings via setContent().
-import {BackPlate} from "SpectaclesUIKit.lspkg/Scripts/BackPlate"
-import {FlexLayout} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexLayout"
-import {FlexItem} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexItem"
-import {FlexAlign, FlexAlignSelf, FlexDirection, FlexJustify} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexTypes"
+import {BackPlate} from "UIKit.lspkg/Scripts/BackPlate"
+import {FlexLayout} from "UIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexLayout"
+import {FlexItem} from "UIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexItem"
+import {FlexAlign, FlexAlignSelf, FlexDirection, FlexJustify} from "UIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexTypes"
 
 const LAYOUT_Z_LIFT = 0.02
 

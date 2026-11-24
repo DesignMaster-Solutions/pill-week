@@ -6,8 +6,8 @@
 // and listens to onCellPinched. Text lives here (not in the controller) per the UI-module rule;
 // it is placed per compartment because each label belongs to a physical 4 cm column/row of the box,
 // so a FlexLayout would only re-derive the same grid.
-import Event, {PublicApi} from "SpectaclesInteractionKit.lspkg/Utils/Event"
-import {Interactable} from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
+import Event, {PublicApi} from "InteractionKit.lspkg/Utils/Event"
+import {Interactable} from "InteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
 import {CellView, DAYS, SLOTS, WEEK_KEYS} from "./PillWeekState"
 
 const BOX_MESH = requireAsset("../Meshes/PillWeekBox.mesh") as RenderMesh

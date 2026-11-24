@@ -24,6 +24,7 @@
   VersionPatch: 0
   VersionPrerelease: ""
   UpdateOrder: 0
+  RunInEditor: false
   ComponentUid: cd02422f-9f5d-4f23-a306-f5fc058619da
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked

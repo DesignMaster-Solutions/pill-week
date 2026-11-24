@@ -7,6 +7,7 @@ import {Dc4SkippedTurnsAmber} from "./Dc4SkippedTurnsAmber"
 import {Dc5NextLightsEachMedicine} from "./Dc5NextLightsEachMedicine"
 import {Dc6FinishSummary} from "./Dc6FinishSummary"
 import {Dc7ArmReachesEverything} from "./Dc7ArmReachesEverything"
+import {Dc8WorldQueryPlacesBox} from "./Dc8WorldQueryPlacesBox"
 import {PrintSomeChecked} from "./PrintSomeChecked"
 import {PrintWrongAndSkipped} from "./PrintWrongAndSkipped"
 
@@ -21,6 +22,7 @@ export class LeafIndex extends BaseScriptComponent {
     {id: "dc5-next-lights-each-medicine", typename: Dc5NextLightsEachMedicine.getTypeName()},
     {id: "dc6-finish-summary", typename: Dc6FinishSummary.getTypeName()},
     {id: "dc7-ik-arm-reaches-everything", typename: Dc7ArmReachesEverything.getTypeName()},
+    {id: "dc8-world-query-places-box", typename: Dc8WorldQueryPlacesBox.getTypeName()},
     // poses for docs/prints, not done criteria
     {id: "print-02-some-checked", typename: PrintSomeChecked.getTypeName()},
     {id: "print-03-wrong-and-skipped", typename: PrintWrongAndSkipped.getTypeName()},

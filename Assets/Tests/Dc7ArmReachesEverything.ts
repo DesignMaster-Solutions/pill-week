@@ -4,7 +4,7 @@ import {findInteractablesByName} from "Leaf.lspkg/Interactors/InteractableUtils"
 import {sleep} from "Leaf.lspkg/Utils/common/Utils"
 import {IKBodyInteractor} from "Leaf.lspkg/Interactors/interactor/ik/IKBodyInteractor"
 import {DiagnosticRecorder} from "Leaf.lspkg/Diagnostic/DiagnosticRecorder"
-import {Interactable} from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
+import {Interactable} from "InteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
 import {EVENINGS, MORNINGS, PillWeekLeaf} from "./PillWeekLeaf"
 
 // DC7 (reach): a seated user's IK arm (LEAF arm model, head at the preview pose) reaches every

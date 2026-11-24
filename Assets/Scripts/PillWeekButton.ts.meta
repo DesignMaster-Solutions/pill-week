@@ -24,6 +24,7 @@
   VersionPatch: 0
   VersionPrerelease: ""
   UpdateOrder: 0
+  RunInEditor: false
   ComponentUid: e628467a-caa7-49f8-a3b5-3bac962160c0
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
@@ -49,7 +50,7 @@
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekButton – table-edge button</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekButton: table-edge button</span>"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Settings"}'
     - '// @input string label = "Next medicine" {"hint":"Button label"}'

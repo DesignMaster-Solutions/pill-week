@@ -24,6 +24,7 @@
   VersionPatch: 0
   VersionPrerelease: ""
   UpdateOrder: 0
+  RunInEditor: false
   ComponentUid: 00da4b51-575b-401e-8d7d-3fa49ca1ef69
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
@@ -51,7 +52,7 @@
     -
       {}
   InputLines:
-    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekCardUI – medicine card / summary</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PillWeekCardUI: medicine card / summary</span>"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Settings"}'
     - '// @input float widthCm = 30 {"hint":"Card width in cm (brief: 24; 30 fits the longest line at 1.2 cm cap height)", "widget":"slider", "min":16, "max":40, "step":1}'

@@ -1,8 +1,8 @@
 // PillWeekButton: one UIKit RectangleButton with a light label, placed by its authored SceneObject
 // (BoxHereButton / NextButton / StartOverButton). Emits onPressed; setLabel() lets the controller
 // switch "Next medicine" to "Finish". Holds no state.
-import Event, {PublicApi} from "SpectaclesInteractionKit.lspkg/Utils/Event"
-import {RectangleButton} from "SpectaclesUIKit.lspkg/Scripts/Components/Button/RectangleButton"
+import Event, {PublicApi} from "InteractionKit.lspkg/Utils/Event"
+import {RectangleButton} from "UIKit.lspkg/Scripts/Components/Button/RectangleButton"
 
 const BUTTON_LABEL_Z = 0.08
 

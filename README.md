@@ -23,4 +23,4 @@ Built for [Learn AR with SPECS](https://learn-specs.devpost.com/) Round 2 by Des
 
 License: MIT
 
-Demo video (screen recording of the Lens Studio preview): https://youtu.be/5JjF62Mjf48
+Demo video (screen recording of the Lens Studio preview, narrated in my own voice): https://youtu.be/478zSbzUDFQ

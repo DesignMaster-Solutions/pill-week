@@ -1,6 +1,6 @@
 // Run: node tests/PillWeekState.test.ts  (Node >= 22.18 strips TS types natively)
 import assert from "node:assert/strict"
-import {BOX_LOCAL, boxRay, PillWeekState, REGIMEN, rootForHit, WEEK_KEYS} from "../Assets/Scripts/PillWeekState.ts"
+import {BOX_LOCAL, boxRay, pinchTargetSize, PillWeekState, REGIMEN, rootForHit, WEEK_KEYS} from "../Assets/Scripts/PillWeekState.ts"
 
 const s = new PillWeekState()
 const lit = () => WEEK_KEYS.filter((k) => s.cell(k).kind === "lit")
@@ -89,4 +89,10 @@ assert.equal(rootForHit([0, -40, -45], [0.7, 0.7, 0], 0), null)
 assert.equal(rootForHit([0, -40, -45], [0, -1, 0], 0), null)
 // a slightly noisy table normal is still a table
 assert.ok(rootForHit([0, -40, -45], [0.1, 0.99, 0.05], 0))
+// judge feedback (Joe, 20/11): the hand lands on the neighbouring day. The compartment the user should
+// pinch next gets a wider, taller pinch target so a ray near its edge hits it before the neighbour.
+assert.deepEqual(pinchTargetSize({kind: "lit", next: true, dots: []}, 4), [6, 3, 6])
+assert.deepEqual(pinchTargetSize({kind: "lit", next: false, dots: []}, 4), [4, 2, 4])
+assert.deepEqual(pinchTargetSize({kind: "empty", next: false, dots: []}, 4), [4, 2, 4])
+assert.deepEqual(pinchTargetSize({kind: "checked", next: false, dots: []}, 4), [4, 2, 4])
 console.log("PillWeekState: all checks passed")

@@ -8,7 +8,7 @@
 // so a FlexLayout would only re-derive the same grid.
 import Event, {PublicApi} from "InteractionKit.lspkg/Utils/Event"
 import {Interactable} from "InteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
-import {CellView, DAYS, SLOTS, WEEK_KEYS} from "./PillWeekState"
+import {CellView, DAYS, pinchTargetSize, SLOTS, WEEK_KEYS} from "./PillWeekState"
 
 const BOX_MESH = requireAsset("../Meshes/PillWeekBox.mesh") as RenderMesh
 const BASE_MAT = requireAsset("../Materials/PillWeekUnlit.mat") as Material
@@ -16,6 +16,7 @@ const BASE_MAT = requireAsset("../Materials/PillWeekUnlit.mat") as Material
 interface Cell {
   obj: SceneObject
   lid: RenderMeshVisual
+  collider: ColliderComponent
   check: SceneObject
   dots: RenderMeshVisual[]
   skipped: SceneObject
@@ -87,6 +88,10 @@ export class PillWeekBoxUI extends BaseScriptComponent {
     const c = this.cells.get(key)
     if (!c) return
     c.view = view
+    const [sx, sy, sz] = pinchTargetSize(view, this.cellSizeCm)
+    const shape = Shape.createBoxShape()
+    shape.size = new vec3(sx, sy, sz)
+    c.collider.shape = shape
     c.check.enabled = view.kind === "checked"
     c.skipped.enabled = view.kind === "amber"
     c.dots.forEach((d, i) => {
@@ -136,7 +141,7 @@ export class PillWeekBoxUI extends BaseScriptComponent {
     obj.setParent(this.sceneObject)
     obj.getTransform().setLocalPosition(pos)
 
-    // 4 x 4 cm pinch target: collider + SIK Interactable on the cell itself
+    // 4 x 4 cm pinch target (grows on the next compartment, see setCell): collider + SIK Interactable
     const col = obj.createComponent("Physics.ColliderComponent") as ColliderComponent
     const shape = Shape.createBoxShape()
     shape.size = new vec3(s, 2, s)
@@ -165,7 +170,7 @@ export class PillWeekBoxUI extends BaseScriptComponent {
     const skipped = this.text(obj, "Skipped", "skipped", new vec3(0, 1.1, -0.4), 50)
     skipped.enabled = false
 
-    const cell: Cell = {obj, lid, check, dots, skipped, view: {kind: "empty", next: false, dots: []}, hovered: false, wrongUntil: 0}
+    const cell: Cell = {obj, lid, collider: col, check, dots, skipped, view: {kind: "empty", next: false, dots: []}, hovered: false, wrongUntil: 0}
     it.onHoverEnter.add(() => (cell.hovered = true))
     it.onHoverExit.add(() => (cell.hovered = false))
     it.onTriggerEnd.add(() => this._onCellPinched.invoke(key))

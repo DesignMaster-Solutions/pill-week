@@ -271,3 +271,11 @@ export function rootForHit(hit: V3, normal: V3, yaw: number): V3 | null {
   const o = rotY(BOX_LOCAL, yaw)
   return [hit[0] - o[0], hit[1] - o[1], hit[2] - o[2]]
 }
+
+/** Pinch collider size [x, y, z] in cm for a compartment of pitch `cellCm`. The compartment the user
+ *  should pinch next grows 1.5x and 1.5x taller, so it overlaps half of each neighbour and a ray near
+ *  the shared edge hits it first (judge feedback: the hand landed on the neighbouring day). */
+export function pinchTargetSize(view: CellView, cellCm: number): V3 {
+  const k = view.kind === "lit" && view.next ? 1.5 : 1
+  return [cellCm * k, 2 * k, cellCm * k]
+}

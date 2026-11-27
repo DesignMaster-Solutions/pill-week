@@ -95,4 +95,16 @@ assert.deepEqual(pinchTargetSize({kind: "lit", next: true, dots: []}, 4), [6, 3,
 assert.deepEqual(pinchTargetSize({kind: "lit", next: false, dots: []}, 4), [4, 2, 4])
 assert.deepEqual(pinchTargetSize({kind: "empty", next: false, dots: []}, 4), [4, 2, 4])
 assert.deepEqual(pinchTargetSize({kind: "checked", next: false, dots: []}, 4), [4, 2, 4])
+// a zero normal is not a table: World Query can hand one back on a miss
+assert.equal(rootForHit([0, -40, -45], [0, 0, 0], 0), null)
+// the card's next compartment can be an amber skip; it still has to win the edge over the neighbour
+s.reset()
+s.markBoxFound()
+s.pinchCell("Mon_AM")
+s.pinchCell("Wed_AM")
+const skipped = s.cell("Tue_AM")
+assert.equal(skipped.kind, "amber")
+assert.equal(skipped.next, true)
+assert.deepEqual(pinchTargetSize(skipped, 4), [6, 3, 6])
+assert.deepEqual(pinchTargetSize(s.cell("Wed_AM"), 4), [4, 2, 4])
 console.log("PillWeekState: all checks passed")
